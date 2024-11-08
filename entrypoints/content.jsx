@@ -14,7 +14,7 @@ export default defineContentScript({
           document.querySelectorAll('button')
         ).filter((button) => {
           const spanText = button.querySelector('span')?.innerText
-          return spanText === 'Accept'
+          return spanText === 'Connect'
         })
 
         // Click each Accept button with a delay
@@ -44,7 +44,7 @@ export default defineContentScript({
             zIndex: 1000,
           }}
         >
-          {isProcessing ? 'Accepting...' : 'Accept All'}
+          {isProcessing ? 'Connecting...' : 'Connect with All'}
         </button>
       )
     }
